@@ -1,0 +1,138 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600";
+
+/* BASE */
+@import "vars.scss";
+@import "functions.scss";
+@import "base.scss";
+@import "classes.scss";
+@import "icons.scss";
+@import "ui.scss";
+@import "keyframes";
+
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: #ffffff;
+	z-index: 1;
+	&__body {
+		padding: 16px 0;
+	}
+	&__logo {
+		margin-bottom: 4px;
+	}
+
+	&__column1 {
+		gap: 103px;
+		margin-left: 42px;
+		margin-right: 98px;
+	}
+	&__column2 {
+		gap: 42px;
+	}
+}
+
+.main-screen {
+	min-height: 689px;
+	background: var(--accent-backgroundColor) url("../img/banner.png") top right
+		no-repeat;
+	&__content {
+		max-width: 514px;
+		padding-top: 100px;
+	}
+	&__title {
+		font-weight: 600;
+		text-wrap: balance;
+		span {
+			color: var(--accent-color2);
+		}
+	}
+	&__btns {
+		gap: 12px;
+		margin-top: 52px;
+	}
+	&__btn {
+		text-decoration: none;
+	}
+	&__request {
+		margin-top: 72px;
+	}
+	&__play {
+		position: absolute;
+		width: 200px;
+		height: 200px;
+		top: 52px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		img {
+			animation: rotate 15s normal linear infinite;
+			width: 100%;
+		}
+	}
+}
+
+.advantages {
+	padding: 62px 0 100px;
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+	}
+	&__item {
+		border: 1px solid var(--border-color);
+		border-radius: 12px;
+		padding: 20px 45px 24px 30px;
+		p {
+			margin-top: 12px;
+			text-wrap: balance;
+			line-height: 22px;
+		}
+	}
+	&__circle {
+		flex: 0 0 52px;
+		height: 52px;
+		border-radius: 50%;
+		background-color: var(--accent-color2);
+		justify-content: center;
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: #ffffff;
+		}
+	}
+
+	&__top {
+		justify-content: flex-start;
+		gap: 12px;
+		span {
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 28px;
+		}
+	}
+}
+
+.service {
+	&__row {
+		padding: 44px 0;
+		border-top: 2px solid var(--accent-color1);
+		border-bottom: 2px solid var(--accent-color1);
+	}
+	&__title {
+		font-weight: 600;
+		max-width: 297px;
+	}
+	&__text {
+		flex: 0 0 746px;
+		p {
+			line-height: 22px;
+			text-wrap: balance;
+			&:not(:last-child) {
+				margin-bottom: 32px;
+			}
+		}
+	}
+}

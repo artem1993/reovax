@@ -1,0 +1,59 @@
+@use "sass:math";
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-family: var(--font);
+	font-size: rem(16);
+	color: var(--text-color);
+	display: flex;
+	flex-direction: column;
+}
+
+[class*="container"] {
+	position: relative;
+	max-width: rem($maxWidthContainer);
+	margin: 0 auto;
+	padding: 0 rem(math.div($containerPadding, 2));
+}
+
+input {
+	outline: none;
+	padding: 0;
+	border: 0;
+	height: 100%;
+	background-color: transparent;
+	color: currentColor;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	padding-top: 180px;
+}
+
+h1,
+h2 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 48px;
+	line-height: 66px;
+}
+
+h2 {
+	font-size: 42px;
+	line-height: 58px;
+}
+
+p {
+	margin: 0;
+}
